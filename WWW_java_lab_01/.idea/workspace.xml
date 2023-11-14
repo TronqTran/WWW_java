@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4f66ed58-c40c-4104-8ee3-bc320c726b67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/controller/ControllerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/database/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/models/GrantAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/models/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/GrantAccessRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/account_form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/role_form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/update_form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gk/demo/src/main/java/com/example/demo/databases/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/lib/week01_db_script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/lib/week1_new.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/entities/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/entities/Logs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week01_lap01_TranBinhTrong_20072511/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_db_script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/entities/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/java/com/edu/iuh/fit/week01_lap01_tranbinhtrong_20072511/entities/Logs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week01_lap01_TranBinhTrong_20072511/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1/week1_new.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Y9SxtPnNJfbyB4iG4tdynRuMvM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/trong/Documents/Zalo Received Files/exam",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="Gradle : vn.edu.iuh : lab_01-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___vn_edu_iuh___lab_01_1_0_SNAPSHOT_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="24f26dea-249b-4e06-ac40-25b94699ccc9" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : vn.edu.iuh : lab_01-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f66ed58-c40c-4104-8ee3-bc320c726b67" name="Changes" comment="" />
+      <created>1699936553438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699936553438</updated>
+      <workItem from="1699936554362" duration="267000" />
+      <workItem from="1699936835961" duration="11756000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
