@@ -1,2 +1,4 @@
-package vn.edu.iuh.lab_06.controllers;public class CommentController {
+package vn.edu.iuh.lab_06.controllers;
+
+public class CommentController {
 }
