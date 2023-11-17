@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${company.name}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container py-5">
+    <div class="row mb-5">
+        <h1 class="text-center mb-1" th:text="${company.name}"></h1>
+        <a class="text-center" th:href="'/companies/'+${company.id}+'/job'">Add job</a>
+    </div>
+    <div class="row">
+        <div class="card col-md-6">
+            <div class="card-header">
+                <h3 class="card-title">General information</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>Address</span>
+                        <h6 class="fs-6" th:text="${company.address.number}+ ' ' +${company.address.street}+ ', ' +${company.address.city}"></h6>
+                    </div>
+                    <div class="col-md-6">
+                        <span>Country</span>
+                        <h6 class="fs-6" th:text="${company.address.country.getName()}"></h6>
+                    </div>
+                    <div class="col-md-6">
+                        <span>Email</span>
+                        <h6 class="fs-6" th:text="${company.email}"></h6>
+                    </div>
+                    <div class="col-md-6">
+                        <span>Phone</span>
+                        <h6 class="fs-6" th:text="${company.phone}"></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <span>Website</span>
+                        <br/>
+                        <a class="block" th:href="${company.webURL}" th:text="${company.webURL}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Job</h3>
+                </div>
+                <div class="card-body">
+                    <h1 class="text-center" th:if="${company.jobs.size() == 0}">Currently no job opening</h1>
+                    <th:block th:each="job : ${company.jobs}">
+                        <div class="card mb-5">
+                            <div class="card-header">
+                                <h5 class="text-center" th:text="${job.name}"></h5>
+                            </div>
+                            <div class="card-body">
+                                <h6>Requirements:</h6>
+                                <ul>
+                                    <th:block th:each="skill : ${job.jobSkills}">
+                                        <li th:text="${skill.skill.skillName + ' (' + skill.skillLevel.name().toLowerCase() + ')'}"></li>
+                                    </th:block>
+                                </ul>
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+
+        <div class="card col-md-6 mt-5">
+            <div class="card-header">
+                <h3 class="card-title">Company overview</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p th:text="${company.about}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
