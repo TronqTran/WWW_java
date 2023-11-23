@@ -8,55 +8,67 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add role</title>
+    <title>Add Role</title>
 </head>
 <style>
-    *, *::after, *::before{
-        padding: 0;
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
         margin: 0;
-        box-sizing: border-box;
     }
 
-    body{
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
-        position: relative;
-        background: orangered;
     }
 
-    .wrapper{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    form {
+        background-color: #fff;
+        padding: 30px;
+        width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    form{
-        background-color: white;
-        padding: 20px;
-        width: 600px;
-    }
-
-    h1{
+    h1 {
         text-align: center;
-        font-size: 18px;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
     }
 
-    .form-group{
+    .form-group {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     }
 
-    .form-group:not(:last-child){
-        margin-bottom: 10px;
+    label {
+        font-size: 16px;
+        color: #555;
     }
 
-    input{
-        padding: 5px;
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
-    button{
-        padding: 5px;
+    button {
+        padding: 10px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
     }
 </style>
 <body>
@@ -64,7 +76,7 @@
     <form method="post" action="controllerServlet">
         <input type="hidden" name="action" value="addRole"/>
 
-        <h1>Add role</h1>
+        <h1>Add Role</h1>
         <div class="form-group">
             <label>Role Id</label>
             <input type="text" name="roleId"/>
@@ -78,9 +90,10 @@
             <input type="text" name="description"/>
         </div>
         <div class="form-group">
-            <button type="submit">Add role</button>
+            <button type="submit">Add Role</button>
         </div>
     </form>
 </div>
 </body>
 </html>
+

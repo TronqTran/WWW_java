@@ -5,13 +5,14 @@ import vn.edu.iuh.lab_01.models.Log;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Optional;
 
 public class LogRepository {
     private Connection connection;
 
-    public LogRepository() throws Exception{
+    public LogRepository() throws SQLException, ClassNotFoundException{
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
@@ -23,7 +24,7 @@ public class LogRepository {
             preparedStatement.setString(2, log.getAccountId());
             preparedStatement.setString(3, log.getNotes());
             preparedStatement.executeUpdate();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
@@ -35,7 +36,7 @@ public class LogRepository {
             preparedStatement.setTimestamp(1, new Timestamp(System.currentTimeMillis()));
             preparedStatement.setLong(2, logId);
             preparedStatement.executeUpdate();
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
     }
@@ -54,7 +55,7 @@ public class LogRepository {
                 log.setNotes(resultSet.getString("notes"));
                 return Optional.of(log);
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return Optional.empty();

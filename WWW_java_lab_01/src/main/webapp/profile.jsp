@@ -6,60 +6,83 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Proflie</title>
+    <title>Profile</title>
 </head>
 <style>
-    *, *::after, *::before{
-        padding: 0;
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
         margin: 0;
-        box-sizing: border-box;
     }
 
-    body{
+    header {
+        padding: 20px;
+        background-color: #343a40;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
-        position: relative;
-        background: orangered;
     }
 
-    header{
-        padding: 20px;
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
+    .profile {
+        width: 500px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .wrapper{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .profile{
-        width: 550px;
-        background: white;
-        padding: 20px;
-        border-radius: 5px;
-    }
-
-    h1{
+    h1 {
         text-align: center;
-        font-size: 18px;
-        margin-bottom: 25px;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
     }
 
-    .profile-row{
+    .profile-row {
         display: flex;
         justify-content: space-between;
-    }
-    .profile-row:not(:last-child){
         margin-bottom: 15px;
     }
 
-    ul{
+    .profile-row p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    ul {
         list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        font-size: 16px;
+        color: #555;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #c82333;
     }
 </style>
 <body>

@@ -13,7 +13,7 @@ import java.util.List;
 public class GrantAccessRepository {
     private Connection connection;
 
-    public GrantAccessRepository() throws Exception{
+    public GrantAccessRepository() throws SQLException, ClassNotFoundException{
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
     public void addGrantAccess(GrantAccess grantAccess){
@@ -44,7 +44,7 @@ public class GrantAccessRepository {
                 grantAccess.setNote(resultSet.getString("note"));
                 grantAccesses.add(grantAccess);
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return grantAccesses;

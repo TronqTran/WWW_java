@@ -6,57 +6,74 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Update account</title>
+    <title>Update Account</title>
 </head>
 <style>
-    *, *::after, *::before{
-        padding: 0;
+    body {
+        background-color: #f5f5f5;
+        font-family: 'Arial', sans-serif;
         margin: 0;
-        box-sizing: border-box;
     }
 
-    body{
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
-        position: relative;
-        background: orangered;
     }
 
-    .wrapper{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    form{
-        background-color: white;
-        padding: 20px;
+    form {
+        background-color: #ffffff;
+        padding: 30px;
         width: 600px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1{
+    h1 {
         text-align: center;
-        font-size: 18px;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
     }
 
-    .form-group{
+    .form-group {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     }
 
-    .form-group:not(:last-child){
-        margin-bottom: 10px;
+    label {
+        font-size: 16px;
+        color: #555;
     }
 
-    input{
-        padding: 5px;
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
-    button{
-        padding: 5px;
+    button {
+        padding: 10px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    input[type="checkbox"] {
+        margin-top: 5px;
     }
 </style>
 <body>
@@ -65,7 +82,7 @@
         <input type="hidden" name="action" value="updateAccount"/>
 
         <input type="hidden" name="logId" value="${logId}"/>
-        <h1>Update account</h1>
+        <h1>Update Account</h1>
         <div class="form-group">
             <label>Account Id</label>
             <input type="text" name="accountId" value="${account.accountId}"/>
@@ -95,7 +112,7 @@
             </c:forEach>
         </div>
         <div class="form-group">
-            <button type="submit">Add account</button>
+            <button type="submit">Update Account</button>
         </div>
     </form>
 </div>

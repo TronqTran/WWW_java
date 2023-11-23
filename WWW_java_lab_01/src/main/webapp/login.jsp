@@ -11,53 +11,68 @@
     <title>Login</title>
 </head>
 <style>
-    *, *::after, *::before{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+    body {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
     }
 
-    body{
-        height: 100vh;
-        position: relative;
-        background: orangered;
-    }
-
-    .wrapper{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    form{
-        width: 450px;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-    }
-
-    h1{
-        text-align: center;
-        font-size: 18px;
-    }
-
-    .form-group{
+    .wrapper {
         display: flex;
-        flex-direction: column;
-        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
 
-    .form-group:not(:last-child){
-        margin-bottom: 10px;
+    form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    input{
-        padding: 5px;
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
     }
 
-    button{
-        padding: 5px;
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    .error-message {
+        color: #e74c3c;
+        text-align: center;
     }
 </style>
 <body>
@@ -67,17 +82,17 @@
         <h1>Login</h1>
         <div class="form-group">
             <label>Email: </label>
-            <input type="email" name="email"/>
+            <input type="email" name="email" required/>
         </div>
         <div class="form-group">
             <label>Password: </label>
-            <input type="password" name="password"/>
+            <input type="password" name="password" required/>
         </div>
         <div class="form-group">
             <button type="submit">Login</button>
         </div>
         <div class="form-group">
-            <p>${error}</p>
+            <p class="error-message">${error}</p>
         </div>
     </form>
 </div>

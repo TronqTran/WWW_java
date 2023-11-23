@@ -13,6 +13,7 @@ import vn.edu.iuh.lab_01.repositories.LogRepository;
 import vn.edu.iuh.lab_01.repositories.RoleRepository;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +24,7 @@ public class AccountService {
     private LogRepository logRepository;
     private RoleRepository roleRepository;
 
-    public AccountService() throws Exception{
+    public AccountService() throws SQLException, ClassNotFoundException  {
         this.accountRepository = new AccountRepository();
         this.grantAccessRepository = new GrantAccessRepository();
         this.logRepository = new LogRepository();
@@ -52,11 +53,11 @@ public class AccountService {
                 }
             }
             if (isAdmin){
-                List<Account> accounts = this.accountRepository.getAll();
-                request.getSession().setAttribute("accounts", currentAccount);
+                List<Account>accounts = this.accountRepository.getAll();
+                request.getSession().setAttribute("account", currentAccount);
                 request.getSession().setAttribute("log", log);
 
-                request.getSession().setAttribute("accounts", accounts);
+                request.setAttribute("accounts", accounts);
                 request.getRequestDispatcher("dashboard.jsp").forward(request, response);
             }
             else {

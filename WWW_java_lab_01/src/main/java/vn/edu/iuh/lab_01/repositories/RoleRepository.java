@@ -3,10 +3,7 @@ package vn.edu.iuh.lab_01.repositories;
 import vn.edu.iuh.lab_01.database.DatabaseConnection;
 import vn.edu.iuh.lab_01.models.Role;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -14,11 +11,11 @@ import java.util.Optional;
 public class RoleRepository {
     private Connection connection;
 
-    public RoleRepository() throws Exception{
+    public RoleRepository() throws SQLException, ClassNotFoundException{
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
     public Optional<Role> findRoleById(String id){
-        String sql = "SELECT * FROM role WHERE id = ?";
+        String sql = "SELECT * FROM role WHERE role_id = ?";
         try {
             var preparedStatement = this.connection.prepareStatement(sql);
             preparedStatement.setString(1, id);
@@ -31,7 +28,7 @@ public class RoleRepository {
                 role.setStatus(resultSet.getInt("status"));
                 return Optional.of(role);
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return Optional.empty();
@@ -51,7 +48,7 @@ public class RoleRepository {
 
                 roles.add(role);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 

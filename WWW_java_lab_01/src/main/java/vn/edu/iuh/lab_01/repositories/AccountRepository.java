@@ -11,13 +11,13 @@ import java.util.Optional;
 
 public class AccountRepository {
     private Connection connection;
-    public AccountRepository() throws Exception {
+    public AccountRepository() throws SQLException, ClassNotFoundException {
         this.connection = DatabaseConnection.getInstance().getConnection();
     }
 
     private List<Role> grantAccesses(String accountId) {
         List<Role> roles = new ArrayList<>();
-        String sql = "SELECT * FROM role WHERE role_id IN (SELECT role_id FROM account_role WHERE account_id = ?)";
+        String sql = "SELECT * FROM role WHERE role_id IN (SELECT role_id FROM grant_access WHERE account_id = ?)";
         try {
             PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
             preparedStatement.setString(1, accountId);
@@ -30,7 +30,7 @@ public class AccountRepository {
                 role.setStatus(resultSet.getInt("status"));
                 roles.add(role);
             }
-        }catch (Exception e) {
+        }catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return roles;
@@ -52,7 +52,7 @@ public class AccountRepository {
                 account.setRoles(this.grantAccesses(account.getAccountId()));
                 accounts.add(account);
             }
-        }catch (Exception e) {
+        }catch (SQLException e) {
             e.printStackTrace();
         }
         return accounts;
@@ -91,7 +91,7 @@ public class AccountRepository {
                 return Optional.of(account);
             }
         }
-        catch (Exception e){
+        catch (SQLException e){
             e.printStackTrace();
         }
         return Optional.empty();
@@ -112,7 +112,7 @@ public class AccountRepository {
                 account.setStatus(resultSet.getInt("status"));
                 return Optional.of(account);
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return Optional.empty();
