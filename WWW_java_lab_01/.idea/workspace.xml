@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f66ed58-c40c-4104-8ee3-bc320c726b67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/account_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/284bc973-1c8f-45b5-b6cd-6d0aae71c41f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/284bc973-1c8f-45b5-b6cd-6d0aae71c41f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/GrantAccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/GrantAccessRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/LogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/LogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/repositories/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/lab_01/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/account_form.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dashboard.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/role_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/role_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/update_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/update_form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +181,7 @@
       <workItem from="1700029396553" duration="17000" />
       <workItem from="1700031086933" duration="30000" />
       <workItem from="1700656247477" duration="1454000" />
-      <workItem from="1700744789872" duration="8105000" />
+      <workItem from="1700744789872" duration="8467000" />
     </task>
     <servers />
   </component>
