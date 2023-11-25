@@ -3,10 +3,7 @@ package vn.edu.iuh.lab_05.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import vn.edu.iuh.lab_05.enums.SkillLevel;
 import vn.edu.iuh.lab_05.enums.SkillType;
 import vn.edu.iuh.lab_05.helpers.JobHelper;
@@ -39,13 +36,21 @@ public class JobController {
     }
 
     @PostMapping("/job/save")
-    public String saveProduct(Job job,
-                              @RequestParam(name = "skills", required = false) String[] skillNames,
-                              @RequestParam(name = "skillLevel", required = false) String[] skillLevels,
+    public String saveProduct(@ModelAttribute("job") Job job,
+                              @RequestParam(name = "skills") String[] skillNames,
+                              @RequestParam(name = "skillLevel") String[] skillLevels,
                               @RequestParam(name = "companyId") String companyId
     ){
         JobHelper.setJobSkills(skillNames, skillLevels, companyId, job);
         jobService.addJob(job);
         return "redirect:/companies/"+companyId;
+    }
+
+    @GetMapping("/job")
+    public String showJob(Model model){
+        List<Job>jobs = jobService.getAll();
+
+        model.addAttribute("jobs", jobs);
+        return "job";
     }
 }

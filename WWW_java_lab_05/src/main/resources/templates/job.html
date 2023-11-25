@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skill</title>
+    <title>Job</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -13,9 +11,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link" href="/companies">Company</a>
-                <a class="nav-link active" aria-current="page" href="/skills">Skill</a>
+                <a class="nav-link" aria-current="page" href="/skills">Skill</a>
                 <a class="nav-link" href="/candidates">Candidate</a>
-                <a class="nav-link" href="/jobs">Job</a>
+                <a class="nav-link active" href="/job">Job</a>
             </div>
         </div>
     </div>
@@ -24,8 +22,7 @@
 <div class="mt-5">
     <div class="container row col-md-8 offset-md-2">
         <div class="mb-5">
-            <h1>Skills</h1>
-            <a th:href="@{/skills/new}">Create skill</a>
+            <h1>Jobs</h1>
         </div>
 
         <div>
@@ -35,20 +32,17 @@
                     <th>No</th>
                     <th>Name</th>
                     <th>Description</th>
-                    <th>Type</th>
-                    <th>Action</th>
+                    <th>Company</th>
                 </tr>
                 </thead>
                 <tbody>
-                <th:block th:each="skill, status : ${skills}">
+                <th:block th:each="job, status : ${jobs}">
                     <tr>
                         <th th:text="${status.index + 1}"></th>
-                        <th th:text="${skill.skillName}"></th>
-                        <th th:text="${skill.skillDescription}"></th>
-                        <th th:text="${skill.type.name().toLowerCase()}"></th>
+                        <th th:text="${job.name}"></th>
+                        <th th:text="${job.description}"></th>
                         <th>
-                            <a th:href="@{/skills/update/{id}(id=${skill.id})}">Update</a>
-                            <a th:href="@{/skills/delete/{id}(id=${skill.id})}">Delete</a>
+                            <a th:href="@{'/companies/' +${job.company.id}}" th:text="${job.company.name}"></a>
                         </th>
                     </tr>
                 </th:block>
@@ -57,6 +51,5 @@
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,55 +4,42 @@
 >
 <head>
     <meta charset="UTF-8">
-    <title>Skill</title>
+    <title>Add Skill</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="/companies">Company</a>
-                <a class="nav-link active" aria-current="page" href="/skills">Skill</a>
-                <a class="nav-link" href="/candidates">Candidate</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
 <div class="mt-5">
     <div class="container row col-md-8 offset-md-2">
-        <div class="mb-5">
-            <h1>Skills</h1>
-            <a th:href="@{/skills/new}">Create skill</a>
-        </div>
-
-        <div>
-            <table class="table table-hover table-striped table-bordered">
-                <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Type</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <th:block th:each="skill, status : ${skills}">
-                    <tr>
-                        <th th:text="${status.index + 1}"></th>
-                        <th th:text="${skill.skillName}"></th>
-                        <th th:text="${skill.skillDescription}"></th>
-                        <th th:text="${skill.type.name().toLowerCase()}"></th>
-                        <th>
-                            <a th:href="@{/skills/update/{id}(id=${skill.id})}">Update</a>
-                            <a th:href="@{/skills/delete/{id}(id=${skill.id})}">Delete</a>
-                        </th>
-                    </tr>
-                </th:block>
-                </tbody>
-            </table>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center" th:if="${skill == null}">Add skill</h2>
+                <h2 class="text-center" th:if="${skill != null}">Update skill</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" th:action="@{/skills/save}" th:object="${skill}">
+                    <input type="hidden" th:field="*{id}" th:value="${skill.id}"/>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Skill name</label>
+                        <input type="text" class="form-control" placeholder="Enter skill name" th:field="*{skillName}"/>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Skill description</label>
+                        <input type="text" class="form-control" placeholder="Enter skill description" th:field="*{skillDescription}"/>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label">Skill type</label>
+                        <select th:field="*{type}" class="form-select">
+                            <th:block th:each="skillType : ${skillTypes}">
+                                <option th:value="${skillType}" th:text="${skillType.name().toLowerCase()}"></option>
+                            </th:block>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <button class="btn btn-primary w-100" th:if="${skill == null}">Add job</button>
+                        <button class="btn btn-primary w-100" th:if="${skill != null}">Update job</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

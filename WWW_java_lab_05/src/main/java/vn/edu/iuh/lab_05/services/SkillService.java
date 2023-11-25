@@ -6,6 +6,7 @@ import vn.edu.iuh.lab_05.models.Skill;
 import vn.edu.iuh.lab_05.repositories.SkillRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SkillService {
@@ -22,5 +23,9 @@ public class SkillService {
 
     public void deleteSkill(long id){
         skillRepository.deleteById(id);
+    }
+
+    public Optional<Skill> findById(long id){
+        return skillRepository.findById(id);
     }
 }

@@ -11,6 +11,7 @@ import vn.edu.iuh.lab_05.models.Skill;
 import vn.edu.iuh.lab_05.services.SkillService;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class SkillController {
@@ -46,5 +47,17 @@ public class SkillController {
         skillService.deleteSkill(id);
 
         return "redirect:/skills";
+    }
+
+    @GetMapping("/skills/update/{id}")
+    public String updateSkill(@PathVariable("id") long id, Model model){
+        Optional<Skill> result = skillService.findById(id);
+
+        if(result.isEmpty()) return "redirect:/skills";
+
+        SkillType[] skillTypes = SkillType.values();
+        model.addAttribute("skill", result.get());
+        model.addAttribute("skillTypes", skillTypes);
+        return "skill_form";
     }
 }
