@@ -66,14 +66,33 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public String getUserDetail(@PathVariable("id")long id, Model model){
+    public String getUserDetail(@PathVariable("id")long id, Model model, HttpSession session){
         Optional<User> result = userService.findById(id);
         if(result.isEmpty()){
             return "redirect:/";
         }
+
+        User currentUser = (User) session.getAttribute("user");
         List<Post> posts = postService.findByAuthorId(id);
         model.addAttribute("userInfo", result.get());
         model.addAttribute("posts", posts);
+        model.addAttribute("user", currentUser);
         return "user/user_info";
+    }
+
+    @GetMapping("/user/update/{id}")
+    public String getUserUpdateForm(@PathVariable("id")long id, Model model, HttpSession session){
+        Optional<User> result = userService.findById(id);
+        if(result.isEmpty()){
+            return "redirect:/";
+        }
+        model.addAttribute("user", result.get());
+        return "user/update_form";
+    }
+
+    @PostMapping("/user/save")
+    public String saveUser(@ModelAttribute("user")User user){
+        userService.update(user);
+        return "redirect:/";
     }
 }

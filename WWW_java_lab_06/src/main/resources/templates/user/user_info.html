@@ -45,6 +45,15 @@
       <p><strong>Intro:</strong> <span th:text="${userInfo.intro}"></span></p>
       <p><strong>Profile:</strong> <span th:text="${userInfo.profile}"></span></p>
     </div>
+
+    <th:block th:if="${user != null}">
+      <th:block th:if="${user.id == userInfo.id}">
+        <div class="card-footer">
+          <a class="btn btn-primary" th:href="@{'/user/update/'+${userInfo.id}}">Update info</a>
+        </div>
+      </th:block>
+    </th:block>
+
   </div>
 
   <!-- User Posts -->

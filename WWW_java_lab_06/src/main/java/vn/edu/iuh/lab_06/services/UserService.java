@@ -26,6 +26,10 @@ public class UserService {
         return userRepository.findUserByEmailAndPassword(user.getEmail(), user.getPassword());
     }
 
+    public void update(User user){
+        userRepository.save(user);
+    }
+
     public void updateLoginTime(User user){
         user.setLastLogin(Instant.now());
         userRepository.save(user);
