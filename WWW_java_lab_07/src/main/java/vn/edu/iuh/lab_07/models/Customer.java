@@ -1,11 +1,9 @@
 package vn.edu.iuh.lab_07.models;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.util.List;
 
-@Getter
 @Entity
 @Table(name = "customer")
 @NamedQueries({
@@ -25,18 +23,21 @@ public class Customer {
     private String phone;
     @Column(name = "address", length = 250, nullable = false)
     private String address;
-
+    @Column(name = "password", nullable = false)
+    private String password;
     @OneToMany(mappedBy = "customer")
     private List<Order> orderList;
 
     public Customer() {
     }
 
-    public Customer(String name, String email, String phone, String address) {
+    public Customer(String name, String email, String phone, String address, String password, List<Order> orderList) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.address = address;
+        this.password = password;
+        this.orderList = orderList;
     }
 
     public void setId(long id) {
@@ -61,6 +62,38 @@ public class Customer {
 
     public void setOrderList(List<Order> orderList) {
         this.orderList = orderList;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
     }
 
     @Override

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -27,7 +28,7 @@ public class Order {
     private Customer customer;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<OrderDetail> orderDetails;
+    private List<OrderDetail> orderDetails = new ArrayList<>();
 
     public Order() {
     }
@@ -57,6 +58,14 @@ public class Order {
 
     public void setOrderDetails(List<OrderDetail> orderDetails) {
         this.orderDetails = orderDetails;
+    }
+
+    public void addOrderDetail(OrderDetail orderDetail){
+        this.orderDetails.add(orderDetail);
+    }
+
+    public double totalPrice(){
+        return this.orderDetails.stream().mapToDouble(el -> el.getPrice() * el.getQuantity()).sum();
     }
 
     @Override

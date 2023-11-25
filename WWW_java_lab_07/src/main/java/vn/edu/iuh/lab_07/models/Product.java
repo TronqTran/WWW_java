@@ -1,14 +1,10 @@
 package vn.edu.iuh.lab_07.models;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import vn.edu.iuh.lab_07.enums.ProductStatus;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 @Getter
@@ -43,7 +39,7 @@ public class Product {
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<OrderDetail> orderDetails = new ArrayList<>();
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ProductPrice> productPrices = new ArrayList<>();
 
     public Product() {
@@ -57,6 +53,9 @@ public class Product {
         this.status = status;
     }
 
+    public Product(long productId) {
+        this.product_id = productId;
+    }
     public void setProduct_id(long id) {
         this.product_id = id;
     }
@@ -114,5 +113,16 @@ public class Product {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(product_id, product.product_id);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(product_id);
+    }
 }

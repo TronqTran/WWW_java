@@ -1,5 +1,4 @@
 package vn.edu.iuh.lab_07.models;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import vn.edu.iuh.lab_07.pks.OrderDetailPK;
@@ -13,16 +12,16 @@ public class OrderDetail {
     private double quantity;
     @Column(name = "price", nullable = false)
     private double price;
-    @Column(name = "note", length = 255, nullable = true)
+    @Column(name = "note")
     private String note;
 
     @Id
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "order_id")
     private Order order;
     @Id
-    @JoinColumn(name = "product_id")
     @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
 
     public OrderDetail() {

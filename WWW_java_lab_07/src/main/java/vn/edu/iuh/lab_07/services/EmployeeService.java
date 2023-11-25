@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import vn.edu.iuh.lab_07.models.Employee;
 import vn.edu.iuh.lab_07.repositories.EmployeeRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,6 +17,10 @@ public class EmployeeService {
 
     public Page<Employee> findAll(int page, int limit){
         return employeeRepository.findAll(PageRequest.of(page - 1, limit));
+    }
+
+    public List<Employee> findAll(){
+        return employeeRepository.findAll();
     }
 
     public Optional<Employee>findById(long id){

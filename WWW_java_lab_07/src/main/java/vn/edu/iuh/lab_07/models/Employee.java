@@ -1,5 +1,4 @@
 package vn.edu.iuh.lab_07.models;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
@@ -18,6 +17,8 @@ import java.util.Objects;
 @Table(name = "employee")
 @NamedQueries(
         @NamedQuery(name = "Employee.findAll", query = "select e from Employee e where e.status= ?1")
+//        ,@NamedQuery(name = "Employee.findXXXXXXX", query = "select e from Employee e where????")
+        //,...
 )
 public class Employee {
     @Id
@@ -42,6 +43,7 @@ public class Employee {
     private EmployeeStatus status;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+//    @JoinColumn
     private List<Order> lstOrder;
 
     public Employee() {
@@ -54,6 +56,10 @@ public class Employee {
         this.phone = phone;
         this.address = address;
         this.status = status;
+    }
+
+    public Employee(long id) {
+        this.id = id;
     }
 
     public void setId(long id) {
